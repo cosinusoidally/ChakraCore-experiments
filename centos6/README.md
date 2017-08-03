@@ -8,7 +8,7 @@ You need to have node.js in your PATH (I used 4.8.3, but that doesn't matter sin
 ./get_and_patch_chakracore
 ```
 
-This will fetch and patch the official Linux binaries (both ``ch`` and ``libChakraCore.so``). This script also checks the sha256sum of the release tarball to verify its integrity. Once this script has run the patched version of ChakraCore should exist in the directory ``./ChakraCoreFiles``
+This will fetch and patch the official Linux binaries (both ``ch`` and ``libChakraCore.so``). This script also checks the sha256sum of the release tarball to verify its integrity. Once this script has run the patched version of ChakraCore should exist in the directory ``./ChakraCoreFiles`` (note that the tarball ``cc_linux_x64_1_7_0.tar.gz`` is the unpatched original)
 
 To test run:
 ```
@@ -16,7 +16,7 @@ To test run:
 ./test_lib
 ```
 
-``test_ch`` should display a ASCII art Mandelbrot set
+``test_ch`` should display an ASCII art Mandelbrot set
 
 ``test_lib`` should compile and run a simple "Hello World" C embedding example (you will need GCC if you want to build this)
 
