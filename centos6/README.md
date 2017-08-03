@@ -1,4 +1,4 @@
-Microsoft distributes ChakraCore binaries here: https://github.com/Microsoft/ChakraCore/releases . Unfortunately those binaries do not work on CentOS 6 systems since they depend on symbols from GLIBC 2.14 and GLIBC2.17 . In this directory there is a utility to get and patch the binaries in order to allow them to work on CentOS 6 (``./get_and_patch_chakracore``). More generally this utility should be able to allow the official Linux ChakraCore binaries to run on pretty much any x86_64 based Linux distro (the earliest one I have tested is Debian Squeeze).
+Microsoft distributes ChakraCore binaries here: https://github.com/Microsoft/ChakraCore/releases . Unfortunately those binaries do not work on CentOS 6 systems since they depend on symbols from GLIBC 2.14 and GLIBC 2.17 . In this directory there is a utility to get and patch the binaries in order to allow them to work on CentOS 6 (``./get_and_patch_chakracore``). More generally this utility should be able to allow the official Linux ChakraCore binaries to run on pretty much any x86_64 based Linux distro (the earliest one I have tested is Debian Squeeze).
 
 ## Usage
 
