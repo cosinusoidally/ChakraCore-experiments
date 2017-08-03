@@ -2,4 +2,4 @@
 rm hello
 gcc -I ChakraCoreFiles/include -L ChakraCoreFiles/lib hello.c -lrt -lChakraCore -o hello
 export LD_LIBRARY_PATH=ChakraCoreFiles/lib
-LD_PRELOAD="/lib/librt.so.1" ./hello
+LD_PRELOAD="/lib64/librt.so.1" ./hello
