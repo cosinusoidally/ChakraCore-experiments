@@ -1,0 +1,10 @@
+#!/bin/bash
+wget https://aka.ms/chakracore/cc_linux_x64_1_7_0 -O cc_linux_x64_1_7_0.tar.gz
+
+if sha256sum -c cc_linux_x64_1_7_0.tar.gz.sha256sum  ; then 
+  tar xvf cc_linux_x64_1_7_0.tar.gz
+  node patch_ch.js
+  node patch_lib.js
+else
+  echo "Bad SHA256SUM aborting"
+fi

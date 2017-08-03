@@ -1,0 +1,2 @@
+#!/bin/bash
+LD_PRELOAD="/lib/librt.so.1" ChakraCoreFiles/bin/ch ./mandel.js
