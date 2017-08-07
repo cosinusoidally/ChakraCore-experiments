@@ -1,0 +1,10 @@
+#!/bin/bash
+gpg --version
+# CentOS 6 Release key
+gpg --recv-key  C1DAC52D1664E8A4386DBA430946FCA2C105B9DE
+# LLVM Key (signed by a Google Chrome Developer)
+gpg --recv-key  B6C8F98282B944E3B0D5C2530FC3042E345AD05D
+# Brad King from Kitware (signed the cmake source code)
+gpg --recv-key  CBA23971357C2E6590D9EFD3EC8FEF3A7BFB4EDA
+# CentOS 6 Release key (yes we are doing this twice)
+gpg --recv-key  C1DAC52D1664E8A4386DBA430946FCA2C105B9DE

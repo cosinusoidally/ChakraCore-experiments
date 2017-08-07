@@ -1,0 +1,12 @@
+#!/bin/bash
+export USER=root
+export HOME=/root
+source /etc/profile
+cd /root
+export PATH=/opt/cmake-3.5.2/bin:$PATH
+cd src/clang3.8
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="X86" -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_TESTS=OFF -DCLANG_INCLUDE_EXAMPLES=OFF -DCLANG_INCLUDE_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/opt/clang3.8 -DGCC_INSTALL_PREFIX=/opt/rh/devtoolset-4/root/usr/
+make -j2
+make install

@@ -1,0 +1,5 @@
+#!/bin/bash
+./05-build-proot
+./06-setup-root-filesystem
+./07-build-cmake
+./08-build-clang

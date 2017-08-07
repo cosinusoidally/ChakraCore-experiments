@@ -1,0 +1,2 @@
+#!/bin/bash
+./run-in-proot scl enable python27 devtoolset-4 /root/proot-build-clang

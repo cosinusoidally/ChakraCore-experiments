@@ -1,0 +1,7 @@
+#!/bin/bash
+DIR=${PWD}
+cd deps/PRoot/src
+git checkout afe225dc804e7926e588e8af22fbc5433b773e2d
+make
+cp proot $DIR
+cd $DIR

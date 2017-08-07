@@ -1,0 +1,18 @@
+#!/bin/bash
+mkdir deps
+cd deps
+wget https://github.com/CentOS/sig-cloud-instance-images/raw/CentOS-6/docker/centos-6-docker.tar.xz
+wget https://github.com/CentOS/sig-cloud-instance-images/raw/CentOS-6/docker/centos-6-docker.tar.xz.asc
+
+wget http://releases.llvm.org/3.8.0/llvm-3.8.0.src.tar.xz
+wget http://releases.llvm.org/3.8.0/llvm-3.8.0.src.tar.xz.sig
+wget http://releases.llvm.org/3.8.0/cfe-3.8.0.src.tar.xz
+wget http://releases.llvm.org/3.8.0/cfe-3.8.0.src.tar.xz.sig
+wget http://releases.llvm.org/3.8.0/compiler-rt-3.8.0.src.tar.xz
+wget http://releases.llvm.org/3.8.0/compiler-rt-3.8.0.src.tar.xz.sig
+
+git clone https://github.com/proot-me/PRoot.git
+
+wget https://cmake.org/files/v3.5/cmake-3.5.2.tar.gz
+wget https://cmake.org/files/v3.5/cmake-3.5.2-SHA-256.txt
+wget https://cmake.org/files/v3.5/cmake-3.5.2-SHA-256.txt.asc

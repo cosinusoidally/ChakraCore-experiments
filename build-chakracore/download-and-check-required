@@ -1,0 +1,5 @@
+#!/bin/bash
+./01-get-signatures
+./02-get-chakracore-source
+./03-get-deps
+./04-check-signatures

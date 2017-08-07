@@ -1,0 +1,8 @@
+#!/bin/bash
+export USER=root
+export HOME=/root
+source /etc/profile
+cd /root/src/cmake-3.5.2
+./bootstrap --prefix=/opt/cmake-3.5.2
+make -j2
+make install

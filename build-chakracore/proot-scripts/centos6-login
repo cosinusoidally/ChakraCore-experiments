@@ -1,0 +1,5 @@
+#!/bin/sh
+env -i bash
+export USER=root
+export HOME=/root
+source /etc/profile

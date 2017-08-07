@@ -1,0 +1,2 @@
+#!/bin/sh
+./proot -0 -r centos6-root/ -b /proc:/proc -b /run/shm/:/run/shm/ -b /dev:/dev env -i bash

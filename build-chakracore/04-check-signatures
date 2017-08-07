@@ -1,0 +1,6 @@
+#!/bin/bash
+gpg --verify deps/centos-6-docker.tar.xz.asc  
+gpg --verify deps/cfe-3.8.0.src.tar.xz.sig 
+gpg --verify deps/llvm-3.8.0.src.tar.xz.sig
+gpg --verify deps/compiler-rt-3.8.0.src.tar.xz.sig
+gpg --verify deps/cmake-3.5.2-SHA-256.txt.asc

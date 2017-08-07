@@ -1,0 +1,28 @@
+#!/bin/bash
+CUR_DIR=${PWD}
+OUT_DIR=centos6-root
+mkdir $OUT_DIR
+pushd .
+cd $OUT_DIR
+tar xvf ../deps/centos-6-docker.tar.xz
+rm etc/resolv.conf
+cp /etc/resolv.conf etc
+chmod 700 root
+cd root
+mkdir src
+cd src
+tar xvf $CUR_DIR/deps/cmake-3.5.2.tar.gz
+tar xvf $CUR_DIR/deps/llvm-3.8.0.src.tar.xz
+tar xvf $CUR_DIR/deps/cfe-3.8.0.src.tar.xz
+tar xvf $CUR_DIR/deps/compiler-rt-3.8.0.src.tar.xz
+
+mv llvm-3.8.0.src clang3.8
+mv cfe-3.8.0.src clang3.8/tools/clang
+mv compiler-rt-3.8.0.src clang3.8/tools/compiler-rt
+
+popd
+cp proot-scripts/set $OUT_DIR/root
+cp proot-scripts/install-packages $OUT_DIR/root
+cp proot-scripts/proot-build-cmake $OUT_DIR/root
+cp proot-scripts/proot-build-clang $OUT_DIR/root
+./run-in-proot /root/install-packages

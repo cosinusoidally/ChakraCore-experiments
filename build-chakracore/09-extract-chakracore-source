@@ -1,0 +1,3 @@
+!/bin/bash
+tar xvf chakracore-source/v1.7.0.tar.gz
+mv ChakraCore-1.7.0/ centos6-root/root/src/
