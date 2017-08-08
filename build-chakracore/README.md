@@ -23,7 +23,7 @@ This will take a long while since it will build CMake 3.5.2 and Clang 3.8 (requi
 
 Now extract the ChakraCore source and move it into the centos root filesystem:
 ```
-09-extract-chakracore-source
+./09-extract-chakracore-source
 ```
 You are now finally ready to build ChakraCore:
 ```
