@@ -15,7 +15,7 @@ Run the following script to fetch dependencies and check signatures/checksums. L
 ./download-and-check-required
 ```
 
-Next set up the built environment:
+Next set up the build environment:
 ```
 ./setup-build-environment
 ```
