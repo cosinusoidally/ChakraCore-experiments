@@ -4,6 +4,8 @@ I tested this on an Ubuntu 14.04 x86_64 system. This script builds this release:
 
 It builds inside a CentOS6 proot (which is like a chroot, but proot allows you do do this without needing root)
 
+Note this script currently builds ChakraCore without ICU support (``--no-icu``)
+
 You need talloc in order to build
 ```
 sudo apt-get install libtalloc-dev
