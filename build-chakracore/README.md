@@ -49,6 +49,6 @@ Now jump in to out/Release and run the following:
 ```
 make VERBOSE=1 -f Makefile
 ```
-When this errors out run ``pushd .`` copy the command line of the failing command, paste it in to the terminal and append ``-lrt`` . The command should the succeed. Now run ``popd`` . Then rinse and repeat until make manages to get to the end.
+When this errors out run ``pushd .`` copy the command line of the failing command, paste it in to the terminal and append ``-lrt`` . The command should then succeed. Now run ``popd`` . Then rinse and repeat until make manages to get to the end.
 
 If you do all that should should have a ``ch`` binary and a ``libChakraCore.so`` that will run on any x86_64 distro from GLIBC_2.12 up (possibly lower too).
