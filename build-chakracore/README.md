@@ -1,5 +1,7 @@
 This builds a protable Linux ChakraCore binary. It should work on pretty much every x86_64 Linux distro.
 
+I tested this on an Ubuntu 14.04 x86_64 system. This script builds this release: https://github.com/Microsoft/ChakraCore/releases/tag/v1.7.0
+
 It builds inside a CentOS6 proot (which is like a chroot, but proot allows you do do this without needing root)
 
 You need talloc in order to build
