@@ -5,8 +5,9 @@ I tested this on an Ubuntu 14.04 x86_64 system. This script builds this release:
 It builds inside a CentOS6 proot (which is like a chroot, but proot allows you do do this without needing root)
 
 You need talloc in order to build
+```
 sudo apt-get install libtalloc-dev
-
+```
 ## Usage
 
 Run the following script to fetch dependencies and check signatures/checksums. Look out for and act on errors (especically signature ones). Note that this script doesn't currently return error codes so you will need to check errors by eye
