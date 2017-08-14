@@ -1,0 +1,10 @@
+--- ChakraCore-1.7.0/bin/ch/CMakeLists.txt	2017-07-24 18:42:18.000000000 +0000
++++ patched-files/bin/ch/CMakeLists.txt	2017-08-14 18:59:37.651739145 +0000
+@@ -111,6 +111,7 @@
+   ${lib_target}
+   ${CC_LTO_ENABLED}
+   )
++target_link_libraries (ch LINK_PRIVATE -lrt)
+ 
+ if(NOT CC_XCODE_PROJECT)
+   # Add a post build event to the ch target

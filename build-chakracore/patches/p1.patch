@@ -1,0 +1,12 @@
+--- ChakraCore-1.7.0/CMakeLists.txt	2017-07-24 18:42:18.000000000 +0000
++++ patched-files/CMakeLists.txt	2017-08-14 18:59:37.651739145 +0000
+@@ -153,8 +153,7 @@
+ set(CLR_CMAKE_PLATFORM_XPLAT 1)
+ if(CC_TARGETS_AMD64)
+     add_definitions(-D_M_X64_OR_ARM64)
+-    add_compile_options(-msse4.2)
+-
++# removed sse4 flag here 
+     set(CAN_BUILD_WABT 1)
+ elseif(CC_TARGETS_X86)
+     add_definitions(-D__i686__)

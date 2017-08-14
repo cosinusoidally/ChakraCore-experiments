@@ -1,0 +1,26 @@
+--- ChakraCore-1.7.0/lib/Runtime/Language/SimdInt32x4OperationX86X64.cpp	2017-07-24 18:42:18.000000000 +0000
++++ patched-files/lib/Runtime/Language/SimdInt32x4OperationX86X64.cpp	2017-08-14 18:59:37.651739145 +0000
+@@ -85,6 +85,7 @@
+ 
+         X86SIMDValue x86Result;
+         X86SIMDValue v = X86SIMDValue::ToX86SIMDValue(value);
++/*
+         if (AutoSystemInfo::Data.SSE3Available())
+         {
+             x86Result.m128i_value = _mm_abs_epi32(v.m128i_value); // only available after SSE3
+@@ -92,12 +93,15 @@
+         }
+         else
+         {
++*/
+             X86SIMDValue  temp, SIGNMASK;
+             SIGNMASK.m128i_value = _mm_srai_epi32(v.m128i_value, 31);                // mask = value >> 31
+             temp.m128i_value = _mm_xor_si128(v.m128i_value, SIGNMASK.m128i_value);   // temp = value ^ mask
+             x86Result.m128i_value = _mm_sub_epi32(temp.m128i_value, SIGNMASK.m128i_value);  // temp - mask
+             result = X86SIMDValue::ToSIMDValue(x86Result);
++/*
+         }
++*/
+         return result;
+     }
+ 

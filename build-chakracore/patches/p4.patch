@@ -1,0 +1,50 @@
+--- ChakraCore-1.7.0/lib/Runtime/Language/SimdInt8x16OperationX86X64.cpp	2017-07-24 18:42:18.000000000 +0000
++++ patched-files/lib/Runtime/Language/SimdInt8x16OperationX86X64.cpp	2017-08-14 18:59:37.651739145 +0000
+@@ -150,6 +150,7 @@
+         X86SIMDValue x86Result;
+         X86SIMDValue tmpaValue = X86SIMDValue::ToX86SIMDValue(aValue);
+         X86SIMDValue tmpbValue = X86SIMDValue::ToX86SIMDValue(bValue);
++/*
+         if (AutoSystemInfo::Data.SSE4_1Available())
+         {
+             x86Result.m128i_value = _mm_max_epi8(tmpaValue.m128i_value, tmpbValue.m128i_value);  //  max(a,b) == a
+@@ -157,12 +158,14 @@
+         }
+         else
+         {
++*/
+             X86SIMDValue x86Tmp1, x86Tmp2;
+             x86Tmp1.m128i_value = _mm_cmplt_epi8(tmpaValue.m128i_value, tmpbValue.m128i_value); // compare a > b?
+             x86Tmp2.m128i_value = _mm_cmpeq_epi8(tmpaValue.m128i_value, tmpbValue.m128i_value); // compare a == b?
+             x86Result.m128i_value = _mm_or_si128(x86Tmp1.m128i_value, x86Tmp2.m128i_value);
++/*
+         }
+-
++*/
+         return X86SIMDValue::ToSIMDValue(x86Result);
+     }
+ 
+@@ -205,6 +208,7 @@
+         X86SIMDValue x86Result;
+         X86SIMDValue tmpaValue = X86SIMDValue::ToX86SIMDValue(aValue);
+         X86SIMDValue tmpbValue = X86SIMDValue::ToX86SIMDValue(bValue);
++/*
+         if (AutoSystemInfo::Data.SSE4_1Available())
+         {
+             x86Result.m128i_value = _mm_max_epi8(tmpaValue.m128i_value, tmpbValue.m128i_value);  //  max(a,b) == b
+@@ -212,12 +216,14 @@
+         }
+         else
+         {
++*/
+             X86SIMDValue x86Tmp1, x86Tmp2;
+             x86Tmp1.m128i_value = _mm_cmpgt_epi8(tmpaValue.m128i_value, tmpbValue.m128i_value); // compare a > b?
+             x86Tmp2.m128i_value = _mm_cmpeq_epi8(tmpaValue.m128i_value, tmpbValue.m128i_value); // compare a == b?
+             x86Result.m128i_value = _mm_or_si128(x86Tmp1.m128i_value, x86Tmp2.m128i_value);
++/*
+         }
+-
++*/
+ 
+         return X86SIMDValue::ToSIMDValue(x86Result);
+     }

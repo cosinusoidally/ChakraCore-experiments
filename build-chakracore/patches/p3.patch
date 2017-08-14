@@ -1,0 +1,7 @@
+--- ChakraCore-1.7.0/bin/GCStress/CMakeLists.txt	2017-07-24 18:42:18.000000000 +0000
++++ patched-files/bin/GCStress/CMakeLists.txt	2017-08-14 18:59:37.651739145 +0000
+@@ -46,3 +46,4 @@
+ endif()
+ 
+ target_link_libraries (GCStress ${lib_target})
++target_link_libraries (GCStress -lrt)
