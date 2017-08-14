@@ -25,4 +25,5 @@ cp proot-scripts/set $OUT_DIR/root
 cp proot-scripts/install-packages $OUT_DIR/root
 cp proot-scripts/proot-build-cmake $OUT_DIR/root
 cp proot-scripts/proot-build-clang $OUT_DIR/root
+cp proot-scripts/proot-build-chakracore $OUT_DIR/root
 ./run-in-proot /root/install-packages
