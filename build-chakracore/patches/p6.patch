@@ -1,0 +1,40 @@
+--- chakracore-source/ChakraCore-1.7.0/build.sh	2017-07-24 18:42:18.000000000 +0000
++++ centos6-root/root/src/ChakraCore-1.7.0/build.sh	2017-08-22 17:51:55.626918589 +0000
+@@ -354,37 +354,8 @@
+ 
+ if [[ $SHOULD_EMBED_ICU == 1 ]]; then
+     if [ ! -d "${CHAKRACORE_DIR}/deps/icu/source/output" ]; then
+-        ICU_URL="http://source.icu-project.org/repos/icu/icu/tags/release-57-1"
+-        echo -e "\n----------------------------------------------------------------"
+-        echo -e "\nThis script will download ICU-LIB from\n${ICU_URL}\n"
+-        echo "It is licensed to you by its publisher, not Microsoft."
+-        echo "Microsoft is not responsible for the software."
+-        echo "Your installation and use of ICU-LIB is subject to the publisher's terms available here:"
+-        echo -e "http://www.unicode.org/copyright.html#License\n"
+-        echo -e "----------------------------------------------------------------\n"
+-        echo "If you don't agree, press Ctrl+C to terminate"
+-        WAIT_QUESTION="Hit ENTER to continue (or wait 10 seconds)"
+-        if [[ $ALWAYS_YES == 1 ]]; then
+-            echo "$WAIT_QUESTION : Y"
+-        else
+-            read -t 10 -p "$WAIT_QUESTION"
+-        fi
+-
+-        SAFE_RUN `mkdir -p ${CHAKRACORE_DIR}/deps/`
+         cd "${CHAKRACORE_DIR}/deps/";
+         ABS_DIR=`pwd`
+-        if [ ! -d "${ABS_DIR}/icu/" ]; then
+-            echo "Downloading ICU ${ICU_URL}"
+-            if [ ! -f "/usr/bin/svn" ]; then
+-                echo -e "\nYou should install 'svn' client in order to use this feature"
+-                if [ $OS_APT_GET == 1 ]; then
+-                    echo "tip: Try 'sudo apt-get install subversion'"
+-                fi
+-                exit 1
+-            fi
+-            svn export -q $ICU_URL icu
+-            ERROR_EXIT "rm -rf ${ABS_DIR}/icu/"
+-        fi
+ 
+         cd "${ABS_DIR}/icu/source";./configure --with-data-packaging=static\
+                 --prefix="${ABS_DIR}/icu/source/output/"\

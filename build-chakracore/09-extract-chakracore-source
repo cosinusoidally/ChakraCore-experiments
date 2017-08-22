@@ -1,8 +1,12 @@
 !/bin/bash
 tar xvf chakracore-source/v1.7.0.tar.gz
+mkdir ChakraCore-1.7.0/deps
+tar xvf deps/icu_57.1.orig.tar.gz
+mv icu ChakraCore-1.7.0/deps
 patch ChakraCore-1.7.0/CMakeLists.txt < patches/p1.patch 
 patch ChakraCore-1.7.0/bin/ch/CMakeLists.txt < patches/p2.patch 
 patch ChakraCore-1.7.0/bin/GCStress/CMakeLists.txt < patches/p3.patch 
 patch ChakraCore-1.7.0/lib/Runtime/Language/SimdInt8x16OperationX86X64.cpp < patches/p4.patch
 patch ChakraCore-1.7.0/lib/Runtime/Language/SimdInt32x4OperationX86X64.cpp < patches/p5.patch
+patch ChakraCore-1.7.0/build.sh < patches/p6.patch
 mv ChakraCore-1.7.0/ centos6-root/root/src/

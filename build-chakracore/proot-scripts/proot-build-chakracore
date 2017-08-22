@@ -6,4 +6,4 @@ cd /root
 export PATH=/opt/cmake-3.5.2/bin:$PATH
 export PATH=/opt/clang3.8/bin:$PATH
 cd src/ChakraCore-1.7.0/
-./build.sh -t --cxx=/opt/clang3.8/bin/clang++ --cc=/opt/clang3.8/bin/clang --no-icu -j 2
+./build.sh -t --cxx=/opt/clang3.8/bin/clang++ --cc=/opt/clang3.8/bin/clang --embed-icu -j 2

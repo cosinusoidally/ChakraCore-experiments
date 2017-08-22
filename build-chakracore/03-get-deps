@@ -16,3 +16,6 @@ git clone https://github.com/proot-me/PRoot.git
 wget https://cmake.org/files/v3.5/cmake-3.5.2.tar.gz
 wget https://cmake.org/files/v3.5/cmake-3.5.2-SHA-256.txt
 wget https://cmake.org/files/v3.5/cmake-3.5.2-SHA-256.txt.asc
+
+wget http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_57.1.orig.tar.gz
+wget http://archive.ubuntu.com/ubuntu/pool/main/i/icu/icu_57.1-5ubuntu0.1.dsc
