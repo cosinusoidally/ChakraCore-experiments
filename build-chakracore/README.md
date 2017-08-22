@@ -1,6 +1,6 @@
 This builds a protable Linux ChakraCore binary. It should work on pretty much every x86_64 Linux distro.
 
-I tested this on an Ubuntu 14.04 x86_64 system. This script builds this release: https://github.com/Microsoft/ChakraCore/releases/tag/v1.7.0
+I tested this on an Ubuntu 14.04 x86_64 system. This script builds this release: https://github.com/Microsoft/ChakraCore/releases/tag/v1.7.1
 
 It builds inside a CentOS6 proot (which is like a chroot, but proot allows you do do this without needing root)
 
@@ -32,6 +32,10 @@ You are now finally ready to build ChakraCore:
 ./10-build-chakracore
 ```
 
+In theory this should be it. You should now 
+
+If you do see any errors about clock_gettime you may need to apply the workaround below
+
 Here comes the fiddly bit. The ChakraCore build will run almost to the end. It will then fail complaining about clock_gettime. This is because the CMake files are not telling the compiler to link to librt.
 
 First enter the proot and set up your environment (paste the following commands in to your terminal):
@@ -43,7 +47,7 @@ source /etc/profile
 cd /root
 export PATH=/opt/cmake-3.5.2/bin:$PATH
 export PATH=/opt/clang3.8/bin:$PATH
-cd src/ChakraCore-1.7.0/
+cd src/ChakraCore-1.7.1/
 ```
 Now jump in to out/Release and run the following:
 ```
