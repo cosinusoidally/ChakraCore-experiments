@@ -1,8 +1,8 @@
 #!/bin/bash
-wget https://github.com/Microsoft/ChakraCore/archive/v1.7.0.tar.gz
-if sha256sum -c v1.7.0.tar.gz.sha256sum ; then 
+wget https://github.com/Microsoft/ChakraCore/archive/v1.7.1.tar.gz
+if sha256sum -c v1.7.1.tar.gz.sha256sum ; then 
   mkdir chakracore-source
-  mv v1.7.0.tar.gz chakracore-source
+  mv v1.7.1.tar.gz chakracore-source
 else
   echo "BAD sha256sum for chakracore source"
 fi
