@@ -4,7 +4,7 @@ I tested this on an Ubuntu 14.04 x86_64 system. This script builds this release:
 
 It builds inside a CentOS6 proot (which is like a chroot, but proot allows you do do this without needing root)
 
-Note this script currently builds ChakraCore without ICU support (``--no-icu``)
+For ICU support we download the source tarball from here https://packages.ubuntu.com/zesty/libicu57 (this is because the official ICU 57.1 source tarball isn't signed, later versions are).
 
 You need talloc in order to build
 ```
