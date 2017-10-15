@@ -1,4 +1,4 @@
-This builds a protable Linux ChakraCore binary. It should work on pretty much every x86_64 Linux distro.
+This builds a portable Linux ChakraCore binary. It should work on pretty much every x86_64 Linux distro.
 
 I tested this on an Ubuntu 14.04 x86_64 system. This script builds this release: https://github.com/Microsoft/ChakraCore/releases/tag/v1.7.1
 
