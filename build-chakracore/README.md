@@ -32,7 +32,9 @@ You are now finally ready to build ChakraCore:
 ./10-build-chakracore
 ```
 
-In theory this should be it. You should now 
+In theory this should be it. You should now have a libChakraCore.so shared library inside `centos6-root` 
+
+## Troubleshooting
 
 If you do see any errors about clock_gettime you may need to apply the workaround below
 
